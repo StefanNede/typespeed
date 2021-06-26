@@ -1,5 +1,9 @@
 import React, {useState, useEffect} from 'react';
 
+function continueAsGuest() {
+    localStorage.setItem("account", "guest")
+}
+
 export default function Signup() {
     return (
         <div>
@@ -16,6 +20,8 @@ export default function Signup() {
                 Not logged in?
                 <br/>
                 <a href="#">Sign up</a>
+                <br/>
+                <a href="home" onClick={continueAsGuest}>continue as guest</a>
             </section>
         </div>
     )

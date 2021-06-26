@@ -1,0 +1,7 @@
+.word_input {
+  outline: 2px solid black;
+  width: 90vw;
+  margin-left: 5vw;
+  margin-top: 2.5vh;
+  min-height: 5vh;
+}
