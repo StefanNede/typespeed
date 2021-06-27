@@ -8,11 +8,22 @@ const getAccount = () => {
     return account;
 }
 
+// times how long it takes for the person to get the 
+function time() {
+    let start = new Date();
+    // Do things here
+    let finish = new Date();
+    let difference = new Date();
+    difference.setTime(finish.getTime() - start.getTime());
+    alert(difference.getMilliseconds());
+}
+
 export default function home() {
     const [account, setAccount] = useState("");
     useEffect(() => {
         setAccount(getAccount());
     }, [account])
+    let phrase = "hello there people";
     return(
         <div>
             <header>
@@ -30,8 +41,8 @@ export default function home() {
                 </nav>
             </header>
             <main>
-                <WordBox />
-                <WordInput />
+                <WordBox phrase={phrase} />
+                <WordInput phrase={phrase} />
             </main>
         </div>
     )
