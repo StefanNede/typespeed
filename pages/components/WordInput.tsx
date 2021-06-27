@@ -6,6 +6,7 @@ export default function WordInput(props) {
     const [index, setIndex] = useState(0); // holds the index of the word the person is on
     const [startTime, setStartTime] = useState(0);
     const [timeTaken, setTimeTaken] = useState(0);
+    const [wpm, setWpm] = useState(0);
     const averageCharactersPerWord = 5;
     let words = props.phrase.split(" ");
     function checkCorrect(event) {
@@ -35,12 +36,15 @@ export default function WordInput(props) {
     useEffect(() => {
         if (timeTaken !== 0) {
             const wordsTyped = char/averageCharactersPerWord;
-            alert(`${wordsTyped/timeTaken * 60} words per minute`)
+            setWpm(wordsTyped/timeTaken * 60);
         }
     }, [timeTaken])
     return (
         <div>
             <input type="text" name="words" id="word" className="word_input" onKeyPress={() => checkCorrect(event)}/>
+            <button onClick={() => location.reload()}>redo</button>
+            <br/>
+            <p>{wpm} wpm</p>
         </div>
     )
 }

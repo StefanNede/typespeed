@@ -18,6 +18,10 @@ function time() {
     alert(difference.getMilliseconds());
 }
 
+function getPhrase() {
+    // call the api to get a phrase made up of the most commonly used words 
+}
+
 export default function home() {
     const [account, setAccount] = useState("");
     useEffect(() => {
