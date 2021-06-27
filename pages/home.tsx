@@ -35,7 +35,7 @@ export default function home() {
                     <ul>
                         <li>                    
                             <Link href="/landing">
-                                <a>Log out</a> 
+                                <a>{account === "guest" ? "Log in": "Log out"}</a> 
                             </Link>
                         </li>
                         <li>

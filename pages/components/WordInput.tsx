@@ -31,12 +31,14 @@ export default function WordInput(props) {
             let difference = new Date();
             difference.setTime(finish.getTime() - startTime);
             setTimeTaken(difference.getSeconds());
+            console.log(difference.getMilliseconds())
+            console.log(difference.getSeconds())
         }
     }, [index])
     useEffect(() => {
         if (timeTaken !== 0) {
             const wordsTyped = char/averageCharactersPerWord;
-            setWpm(wordsTyped/timeTaken * 60);
+            setWpm(wordsTyped/(timeTaken) * 60);
         }
     }, [timeTaken])
     return (
