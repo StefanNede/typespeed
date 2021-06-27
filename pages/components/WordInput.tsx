@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react";
 
-
 export default function WordInput(props:any) {
     const [char, setChar] = useState(0); // holds number of characters typed
     const [index, setIndex] = useState(0); // holds the index of the word the person is on
@@ -8,7 +7,7 @@ export default function WordInput(props:any) {
     const [timeTaken, setTimeTaken] = useState(0);
     const [wpm, setWpm] = useState(0);
     const averageCharactersPerWord = 5;
-    let words = props.phrase.split(" ");
+    let words:any = props.phrase.split(" ");
     function checkCorrect(event:any) {
         if (event.key === " ") {
             // console.log("space pressed")
