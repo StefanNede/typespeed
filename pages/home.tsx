@@ -3,19 +3,9 @@ import Link from "next/link";
 import WordBox from "./components/WordBox";
 import WordInput from "./components/WordInput";
 
-const getAccount = () => {
+const getAccount = ():any => {
     const account = localStorage.getItem("account");
     return account;
-}
-
-// times how long it takes for the person to get the 
-function time() {
-    let start = new Date();
-    // Do things here
-    let finish = new Date();
-    let difference = new Date();
-    difference.setTime(finish.getTime() - start.getTime());
-    alert(difference.getMilliseconds());
 }
 
 function getPhrase() {
