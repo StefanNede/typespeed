@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react"
 import Link from "next/link"
 
-const getAccount = () => {
+const getAccount = ():any => {
     const account = localStorage.getItem("account");
     return account;
 }
