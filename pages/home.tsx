@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Link from "next/link";
-import WordBox from "./components/WordBox";
-import WordInput from "./components/WordInput";
+import WordBox from "../components/WordBox";
+import WordInput from "../components/WordInput";
 
 const getAccount = ():any => {
     const account = localStorage.getItem("account");
